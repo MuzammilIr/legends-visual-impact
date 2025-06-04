@@ -7,38 +7,39 @@ import { ArrowLeft, Mail, Phone, MapPin, Calendar } from "lucide-react";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-white text-black">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-gray-800">
+      <nav className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b-2 border-black shadow-lg">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <div className="text-2xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+            <div className="text-2xl font-bold text-black transform hover:scale-105 transition-transform duration-300">
               Abdullah Jamal
             </div>
             
-            <div className="hidden md:flex space-x-8">
-              <Link to="/" className="hover:text-yellow-400 transition-colors">Home</Link>
-              <Link to="/achievements" className="hover:text-yellow-400 transition-colors">Achievements</Link>
-              <Link to="/companies" className="hover:text-yellow-400 transition-colors">Companies & Ventures</Link>
-              <Link to="/contact" className="text-yellow-400">Contact</Link>
+            <div className="hidden md:flex space-x-2">
+              <Link to="/"><Button variant="ghost" className="bg-transparent text-black border-2 border-black hover:bg-black hover:text-white transition-all duration-300 transform hover:scale-105">Home</Button></Link>
+              <Link to="/achievements"><Button variant="ghost" className="bg-transparent text-black border-2 border-black hover:bg-black hover:text-white transition-all duration-300 transform hover:scale-105">Achievements</Button></Link>
+              <Link to="/companies"><Button variant="ghost" className="bg-transparent text-black border-2 border-black hover:bg-black hover:text-white transition-all duration-300 transform hover:scale-105">Companies & Ventures</Button></Link>
+              <Link to="/mentorship"><Button variant="ghost" className="bg-transparent text-black border-2 border-black hover:bg-black hover:text-white transition-all duration-300 transform hover:scale-105">Mentorship & Programs</Button></Link>
+              <Link to="/contact"><Button variant="ghost" className="bg-black text-white hover:bg-gray-800 transition-all duration-300 transform hover:scale-105">Contact</Button></Link>
             </div>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-b from-black to-gray-900">
+      <section className="pt-32 pb-20 bg-black text-white">
         <div className="container mx-auto px-6">
-          <Link to="/" className="inline-flex items-center text-yellow-400 hover:text-yellow-300 mb-8">
+          <Link to="/" className="inline-flex items-center text-white hover:text-gray-300 mb-8 transform hover:scale-105 transition-all duration-300">
             <ArrowLeft className="w-5 h-5 mr-2" />
             Back to Home
           </Link>
           
           <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-black mb-6 text-white">
               Get In Touch
             </h1>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto font-semibold">
               Ready to start your journey? Let's connect and build something extraordinary together.
             </p>
           </div>
@@ -46,41 +47,41 @@ const Contact = () => {
       </section>
 
       {/* Contact Information */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="bg-black/50 rounded-xl p-8 border border-yellow-400/20">
-              <h2 className="text-2xl font-bold text-yellow-400 mb-6">Send a Message</h2>
+            <div className="bg-black text-white rounded-xl p-8 border-2 border-black shadow-lg">
+              <h2 className="text-2xl font-black mb-6">Send a Message</h2>
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <Input 
                       placeholder="First Name" 
-                      className="bg-gray-800/50 border-gray-700 text-white placeholder-gray-400"
+                      className="bg-white text-black border-2 border-gray-300 placeholder-gray-500 font-medium"
                     />
                   </div>
                   <div>
                     <Input 
                       placeholder="Last Name" 
-                      className="bg-gray-800/50 border-gray-700 text-white placeholder-gray-400"
+                      className="bg-white text-black border-2 border-gray-300 placeholder-gray-500 font-medium"
                     />
                   </div>
                 </div>
                 <Input 
                   type="email" 
                   placeholder="Email Address" 
-                  className="bg-gray-800/50 border-gray-700 text-white placeholder-gray-400"
+                  className="bg-white text-black border-2 border-gray-300 placeholder-gray-500 font-medium"
                 />
                 <Input 
                   placeholder="Subject" 
-                  className="bg-gray-800/50 border-gray-700 text-white placeholder-gray-400"
+                  className="bg-white text-black border-2 border-gray-300 placeholder-gray-500 font-medium"
                 />
                 <Textarea 
                   placeholder="Your Message" 
-                  className="bg-gray-800/50 border-gray-700 text-white placeholder-gray-400 min-h-[120px]"
+                  className="bg-white text-black border-2 border-gray-300 placeholder-gray-500 min-h-[120px] font-medium"
                 />
-                <Button className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-semibold">
+                <Button className="w-full bg-white text-black hover:bg-gray-200 border-2 border-white font-black transform hover:scale-105 transition-all duration-300">
                   Send Message
                 </Button>
               </form>
@@ -88,36 +89,36 @@ const Contact = () => {
 
             {/* Contact Details */}
             <div className="space-y-8">
-              <div className="bg-black/50 rounded-xl p-6 border border-yellow-400/20">
+              <div className="bg-black text-white rounded-xl p-6 border-2 border-black shadow-lg transform hover:scale-105 transition-all duration-300">
                 <div className="flex items-center mb-4">
-                  <MapPin className="w-6 h-6 text-yellow-400 mr-4" />
-                  <h3 className="text-xl font-bold text-yellow-400">Main Office</h3>
+                  <MapPin className="w-6 h-6 mr-4" />
+                  <h3 className="text-xl font-black">Main Office</h3>
                 </div>
-                <p className="text-gray-300">2 Main Chowk KTS, Haripur</p>
+                <p className="text-gray-200 font-medium">2 Main Chowk KTS, Haripur</p>
               </div>
 
-              <div className="bg-black/50 rounded-xl p-6 border border-yellow-400/20">
+              <div className="bg-black text-white rounded-xl p-6 border-2 border-black shadow-lg transform hover:scale-105 transition-all duration-300">
                 <div className="flex items-center mb-4">
-                  <Calendar className="w-6 h-6 text-yellow-400 mr-4" />
-                  <h3 className="text-xl font-bold text-yellow-400">Public Day</h3>
+                  <Calendar className="w-6 h-6 mr-4" />
+                  <h3 className="text-xl font-black">Public Day</h3>
                 </div>
-                <p className="text-gray-300">Saturday</p>
+                <p className="text-gray-200 font-medium">Saturday</p>
               </div>
 
-              <div className="bg-black/50 rounded-xl p-6 border border-yellow-400/20">
+              <div className="bg-black text-white rounded-xl p-6 border-2 border-black shadow-lg transform hover:scale-105 transition-all duration-300">
                 <div className="flex items-center mb-4">
-                  <Mail className="w-6 h-6 text-yellow-400 mr-4" />
-                  <h3 className="text-xl font-bold text-yellow-400">Email</h3>
+                  <Mail className="w-6 h-6 mr-4" />
+                  <h3 className="text-xl font-black">Email</h3>
                 </div>
-                <p className="text-gray-300">teamjamal@ichcalifornia.com</p>
+                <p className="text-gray-200 font-medium">teamjamal@ichcalifornia.com</p>
               </div>
 
-              <div className="bg-black/50 rounded-xl p-6 border border-yellow-400/20">
+              <div className="bg-black text-white rounded-xl p-6 border-2 border-black shadow-lg transform hover:scale-105 transition-all duration-300">
                 <div className="flex items-center mb-4">
-                  <Phone className="w-6 h-6 text-yellow-400 mr-4" />
-                  <h3 className="text-xl font-bold text-yellow-400">Phone</h3>
+                  <Phone className="w-6 h-6 mr-4" />
+                  <h3 className="text-xl font-black">Phone</h3>
                 </div>
-                <p className="text-gray-300">+923115649310</p>
+                <p className="text-gray-200 font-medium">+923115649310</p>
               </div>
             </div>
           </div>
