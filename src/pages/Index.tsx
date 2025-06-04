@@ -27,39 +27,39 @@ const Index = () => {
   }, [galleryImages.length]);
 
   return (
-    <div className="min-h-screen bg-white text-black">
+    <div className="min-h-screen bg-background text-foreground font-inter">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b-2 border-black shadow-lg">
+      <nav className="fixed top-0 w-full z-50 glass-effect shadow-lg">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <div className="text-2xl font-bold text-black transform hover:scale-105 transition-transform duration-300">
+            <div className="text-2xl font-bold gradient-text transform hover:scale-105 transition-transform duration-300">
               Abdullah Jamal
             </div>
             
             {/* Desktop Navigation */}
-            <div className="hidden md:flex space-x-2">
+            <div className="hidden md:flex space-x-1">
               <Link to="/">
-                <Button variant="ghost" className="bg-black text-white hover:bg-gray-800 hover:text-white border-2 border-black hover:border-gray-800 transition-all duration-300 transform hover:scale-105">
+                <Button variant="ghost" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-6 py-2 text-sm font-medium transition-all duration-300 transform hover:scale-105 shadow-lg">
                   Home
                 </Button>
               </Link>
               <Link to="/achievements">
-                <Button variant="ghost" className="bg-transparent text-black border-2 border-black hover:bg-black hover:text-white transition-all duration-300 transform hover:scale-105">
+                <Button variant="ghost" className="bg-transparent text-foreground hover:bg-primary hover:text-primary-foreground rounded-full px-6 py-2 text-sm font-medium transition-all duration-300 transform hover:scale-105">
                   Achievements
                 </Button>
               </Link>
               <Link to="/companies">
-                <Button variant="ghost" className="bg-transparent text-black border-2 border-black hover:bg-black hover:text-white transition-all duration-300 transform hover:scale-105">
+                <Button variant="ghost" className="bg-transparent text-foreground hover:bg-primary hover:text-primary-foreground rounded-full px-6 py-2 text-sm font-medium transition-all duration-300 transform hover:scale-105">
                   Companies & Ventures
                 </Button>
               </Link>
               <Link to="/mentorship">
-                <Button variant="ghost" className="bg-transparent text-black border-2 border-black hover:bg-black hover:text-white transition-all duration-300 transform hover:scale-105">
+                <Button variant="ghost" className="bg-transparent text-foreground hover:bg-primary hover:text-primary-foreground rounded-full px-6 py-2 text-sm font-medium transition-all duration-300 transform hover:scale-105">
                   Mentorship & Programs
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button variant="ghost" className="bg-transparent text-black border-2 border-black hover:bg-black hover:text-white transition-all duration-300 transform hover:scale-105">
+                <Button variant="ghost" className="bg-transparent text-foreground hover:bg-primary hover:text-primary-foreground rounded-full px-6 py-2 text-sm font-medium transition-all duration-300 transform hover:scale-105">
                   Contact
                 </Button>
               </Link>
@@ -67,7 +67,7 @@ const Index = () => {
 
             {/* Mobile Menu Button */}
             <button 
-              className="md:hidden p-2 border-2 border-black rounded hover:bg-black hover:text-white transition-all duration-300"
+              className="md:hidden p-2 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -76,22 +76,22 @@ const Index = () => {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="md:hidden mt-4 pb-4 border-t-2 border-black">
+            <div className="md:hidden mt-4 pb-4">
               <div className="flex flex-col space-y-2 mt-4">
                 <Link to="/">
-                  <Button variant="ghost" className="w-full bg-black text-white hover:bg-gray-800">Home</Button>
+                  <Button variant="ghost" className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-full">Home</Button>
                 </Link>
                 <Link to="/achievements">
-                  <Button variant="ghost" className="w-full bg-transparent text-black border-2 border-black hover:bg-black hover:text-white">Achievements</Button>
+                  <Button variant="ghost" className="w-full bg-transparent text-foreground hover:bg-primary hover:text-primary-foreground rounded-full">Achievements</Button>
                 </Link>
                 <Link to="/companies">
-                  <Button variant="ghost" className="w-full bg-transparent text-black border-2 border-black hover:bg-black hover:text-white">Companies & Ventures</Button>
+                  <Button variant="ghost" className="w-full bg-transparent text-foreground hover:bg-primary hover:text-primary-foreground rounded-full">Companies & Ventures</Button>
                 </Link>
                 <Link to="/mentorship">
-                  <Button variant="ghost" className="w-full bg-transparent text-black border-2 border-black hover:bg-black hover:text-white">Mentorship & Programs</Button>
+                  <Button variant="ghost" className="w-full bg-transparent text-foreground hover:bg-primary hover:text-primary-foreground rounded-full">Mentorship & Programs</Button>
                 </Link>
                 <Link to="/contact">
-                  <Button variant="ghost" className="w-full bg-transparent text-black border-2 border-black hover:bg-black hover:text-white">Contact</Button>
+                  <Button variant="ghost" className="w-full bg-transparent text-foreground hover:bg-primary hover:text-primary-foreground rounded-full">Contact</Button>
                 </Link>
               </div>
             </div>
@@ -107,7 +107,7 @@ const Index = () => {
             <div
               key={index}
               className={`absolute inset-0 transition-opacity duration-1000 ${
-                index === currentImageIndex ? 'opacity-60' : 'opacity-0'
+                index === currentImageIndex ? 'opacity-80' : 'opacity-0'
               }`}
             >
               <img 
@@ -117,35 +117,35 @@ const Index = () => {
               />
             </div>
           ))}
-          <div className="absolute inset-0 bg-white/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-background/60 via-background/40 to-background/60"></div>
         </div>
 
         {/* Hero Content */}
         <div className="relative z-10 text-center max-w-4xl mx-auto px-6 pt-20">
           <div className="mb-6">
-            <span className="inline-block px-6 py-3 bg-black text-white border-2 border-black rounded-full text-sm font-bold uppercase tracking-wider shadow-lg transform hover:scale-105 transition-transform duration-300">
+            <span className="inline-block px-8 py-3 glass-effect text-foreground rounded-full text-sm font-semibold uppercase tracking-wider shadow-lg transform hover:scale-105 transition-transform duration-300">
               Entrepreneur • Educator • Motivational Speaker
             </span>
           </div>
           
-          <h1 className="text-6xl md:text-8xl font-black mb-6 leading-tight text-black drop-shadow-2xl">
+          <h1 className="text-6xl md:text-8xl font-black mb-6 leading-tight gradient-text drop-shadow-2xl">
             Abdullah Jamal
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-800 mb-8 max-w-2xl mx-auto leading-relaxed font-semibold drop-shadow-lg">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed font-medium drop-shadow-lg">
             CEO - Legends Group of Companies & Brands | Skilled Sniper | Martial Artist | 
             Leading the technology of next generation
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link to="/achievements">
-              <Button size="lg" className="bg-black text-white hover:bg-gray-800 border-2 border-black px-8 py-4 text-lg font-bold transform hover:scale-105 transition-all duration-300 shadow-lg">
+              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 py-4 text-lg font-semibold transform hover:scale-105 transition-all duration-300 shadow-lg">
                 View Achievements
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
             <Link to="/companies">
-              <Button variant="outline" size="lg" className="border-2 border-black text-black bg-white hover:bg-black hover:text-white px-8 py-4 text-lg font-bold transform hover:scale-105 transition-all duration-300 shadow-lg">
+              <Button variant="outline" size="lg" className="border-2 border-primary text-primary bg-transparent hover:bg-primary hover:text-primary-foreground rounded-full px-8 py-4 text-lg font-semibold transform hover:scale-105 transition-all duration-300 shadow-lg">
                 Companies & Ventures
               </Button>
             </Link>
@@ -154,14 +154,14 @@ const Index = () => {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-black rounded-full flex justify-center bg-white">
-            <div className="w-1 h-3 bg-black rounded-full mt-2 animate-pulse"></div>
+          <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center glass-effect">
+            <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse"></div>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="py-20 bg-black text-white">
+      <section className="py-20 gradient-bg">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -171,36 +171,36 @@ const Index = () => {
               <p className="text-lg text-white mb-6 leading-relaxed font-semibold">
                 "Lead. Build. Inspire. Empower the next generation with vision and strength."
               </p>
-              <p className="text-gray-300 mb-8 leading-relaxed">
+              <p className="text-gray-200 mb-8 leading-relaxed">
                 Founder & CEO of Legends Group of Companies and Brands, leading multiple successful 
                 ventures in technology, education, and digital innovation. Expert lecturer, motivator, 
                 and influencer mentoring thousands of students internationally.
               </p>
               
               <div className="grid grid-cols-2 gap-6 mb-8">
-                <div className="text-center p-4 bg-white text-black rounded-lg border-2 border-white shadow-lg">
+                <div className="text-center p-4 glass-effect text-white rounded-lg shadow-lg">
                   <div className="text-2xl font-black">10+</div>
-                  <div className="text-gray-700 font-semibold">Companies</div>
+                  <div className="text-gray-200 font-semibold">Companies</div>
                 </div>
-                <div className="text-center p-4 bg-white text-black rounded-lg border-2 border-white shadow-lg">
+                <div className="text-center p-4 glass-effect text-white rounded-lg shadow-lg">
                   <div className="text-2xl font-black">1000+</div>
-                  <div className="text-gray-700 font-semibold">Students Mentored</div>
+                  <div className="text-gray-200 font-semibold">Students Mentored</div>
                 </div>
               </div>
             </div>
             
             <div className="relative">
-              <div className="bg-white text-black rounded-2xl p-8 border-2 border-white shadow-lg">
+              <div className="glass-effect text-white rounded-2xl p-8 shadow-lg">
                 <h3 className="text-2xl font-black mb-4">Key Positions</h3>
-                <ul className="space-y-3 text-black font-medium">
+                <ul className="space-y-3 text-white font-medium">
                   <li>• Director – Positive Pakistan</li>
                   <li>• Chairman – Team Welfare The Legends</li>
                   <li>• Director – Hazary Di Bethak</li>
                   <li>• Former Director – Skills College Haripur</li>
                 </ul>
                 
-                <div className="mt-6 pt-6 border-t-2 border-gray-300">
-                  <p className="text-sm text-gray-700 font-medium">
+                <div className="mt-6 pt-6 border-t border-gray-300">
+                  <p className="text-sm text-gray-200 font-medium">
                     📌 Public Day: Saturday<br/>
                     📍 Main Office: 2 Main Chowk KTS, Haripur
                   </p>
@@ -212,27 +212,27 @@ const Index = () => {
       </section>
 
       {/* Skills & Passion */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black mb-4 text-black">
+            <h2 className="text-4xl md:text-5xl font-black mb-4 gradient-text">
               Skills & Passion
             </h2>
-            <p className="text-xl text-gray-700 font-semibold">Beyond business - a life of discipline and excellence</p>
+            <p className="text-xl text-muted-foreground font-semibold">Beyond business - a life of discipline and excellence</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="p-6 bg-black text-white rounded-lg border-2 border-black hover:bg-white hover:text-black hover:border-black transition-all duration-300 transform hover:scale-105 shadow-lg">
+            <div className="p-6 gradient-bg text-white rounded-lg hover:scale-105 transition-all duration-300 shadow-lg">
               <h3 className="text-xl font-black mb-3">💼 Business</h3>
               <p className="font-medium">Entrepreneurial leadership, digital innovation, freelancing, e-commerce, cybersecurity</p>
             </div>
             
-            <div className="p-6 bg-black text-white rounded-lg border-2 border-black hover:bg-white hover:text-black hover:border-black transition-all duration-300 transform hover:scale-105 shadow-lg">
+            <div className="p-6 gradient-bg text-white rounded-lg hover:scale-105 transition-all duration-300 shadow-lg">
               <h3 className="text-xl font-black mb-3">🥋 Martial Arts</h3>
               <p className="font-medium">Proficient in Judo, Karate, Boxing & Kickboxing. Trained Sniper with steady aim</p>
             </div>
             
-            <div className="p-6 bg-black text-white rounded-lg border-2 border-black hover:bg-white hover:text-black hover:border-black transition-all duration-300 transform hover:scale-105 shadow-lg">
+            <div className="p-6 gradient-bg text-white rounded-lg hover:scale-105 transition-all duration-300 shadow-lg">
               <h3 className="text-xl font-black mb-3">🎯 Personal</h3>
               <p className="font-medium">Daily gym goer, swimmer, hiker, horse rider. Passion for cars and luxury lifestyle</p>
             </div>
