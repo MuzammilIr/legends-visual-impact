@@ -260,7 +260,7 @@ const Index = () => {
                   </div>
                   
                   <h2 className="text-4xl md:text-5xl font-black mb-4 group-hover:gradient-text transition-all duration-300">
-                    The Clients Hub
+                    The Clients Hub (Pvt Ltd)
                   </h2>
                   
                   <p className="text-xl text-white/90 mb-6 font-semibold">
