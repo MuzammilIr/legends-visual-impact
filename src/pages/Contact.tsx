@@ -109,7 +109,7 @@ const Contact = () => {
                   <Mail className="w-6 h-6 mr-4 text-primary" />
                   <h3 className="text-xl font-black text-foreground">Email</h3>
                 </div>
-                <p className="text-muted-foreground font-medium">teamjamal@ichcalifornia.com</p>
+                <p className="text-muted-foreground font-medium">abdullahjamal9310@gmail.com</p>
               </div>
 
               <div className="glass-effect rounded-xl p-6 shadow-lg transform hover:scale-105 transition-all duration-300">
