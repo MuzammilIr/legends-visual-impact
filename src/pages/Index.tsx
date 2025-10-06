@@ -239,6 +239,44 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* The Clients Hub Section */}
+      <section className="py-20 gradient-bg relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_50%)]"></div>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <a 
+              href="https://the-clients-hub-agency-website.vercel.app/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="block group"
+            >
+              <div className="glass-effect text-white rounded-2xl p-12 shadow-2xl border border-white/20 hover:border-white/40 transition-all duration-500 hover:scale-105 hover:shadow-[0_0_50px_rgba(255,255,255,0.3)] cursor-pointer">
+                <div className="text-center">
+                  <div className="inline-block mb-6">
+                    <div className="w-20 h-20 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-all duration-300 group-hover:rotate-12">
+                      <ArrowRight className="w-10 h-10 text-white group-hover:translate-x-2 transition-transform duration-300" />
+                    </div>
+                  </div>
+                  
+                  <h2 className="text-4xl md:text-5xl font-black mb-4 group-hover:gradient-text transition-all duration-300">
+                    The Clients Hub
+                  </h2>
+                  
+                  <p className="text-xl text-white/90 mb-6 font-semibold">
+                    Premier Digital Agency & Technology Solutions
+                  </p>
+                  
+                  <div className="inline-flex items-center gap-2 text-white/80 group-hover:text-white transition-colors duration-300 font-medium">
+                    <span>Visit our agency website</span>
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
